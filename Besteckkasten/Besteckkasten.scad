@@ -30,6 +30,11 @@ difference(){
       translate([x, y])square([steckeckenLaenge, wandDicke]);
     }
   }
+  
+  //Test deleteme
+  for(x=[wandDicke+trennwandBreite/2-steckeckenLaenge/2:trennwandBreite+wandDicke:schubladenBreite]){
+      translate([x, 15])square([steckeckenLaenge, wandDicke]);
+  }
 }
 
 //Zwischenwände
