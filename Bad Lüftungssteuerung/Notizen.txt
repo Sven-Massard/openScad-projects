@@ -1,0 +1,25 @@
+Buttons:
+	Durchmesser oben: 11.44mm
+	Durchmesser unten: 12,86mm
+	Distanz Platine Button nicht gedrückt: 3,35mm
+	Distanz Platine Button gedrückt: 2,50mm
+	Platine: 11,95mm x 3,2mm
+	Höhe gesamt: 12,21mm
+	Höhe Kappe: 5,7mm
+	
+Display:
+	Breite: 27,71mm
+	Höhe: 28,20 mm
+	
+	Sichtbare Fläche: 14,83mm x 26,62mm
+	Höhe: 4,3mm
+	Höhe mit Pins: 12,3mm
+	
+	
+Plan Gesamtplatine:
+Breite= Display + 1 Button + Toleranz x : 30mm + 12mm +x = 51mm
+Distanz zwischen Buttons und Display: 3mm => 3mm zu Seite.
+
+Höhe = Display + Button + Toleranz x:  30mm + 12 mm + x = 51 mm
+
+Tiefe: 16mm + 2 + 2
