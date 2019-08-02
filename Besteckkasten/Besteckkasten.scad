@@ -13,7 +13,7 @@ difference(){
   square([schubladenBreite, schubladenTiefe]);
   //Löcher für Steckecken vertikale Zwischenwände
   translate([wandDicke, wandDicke])for(x=[0:(basisplattenBreiteFuerBesteck-wandDicke)/5:basisplattenBreiteFuerBesteck-wandDicke]){
-    for(y=[0: (zwischenwandTiefe-steckeckenLaenge)/10: zwischenwandTiefe]){
+    for(y=[wandDicke: (zwischenwandTiefe-steckeckenLaenge)/10: zwischenwandTiefe]){
       translate([x, y])square([wandDicke, steckeckenLaenge]);
     }
   }
@@ -35,7 +35,7 @@ difference(){
   
 }
 
-//Zwischenwände
+//Zwischenwände vertikal
 translate([0, wandDicke])for(x=[0:5]){
   translate([schubladenBreite + 5*(x+1) + schubladenHoehe*x, wandDicke]){
     difference(){
@@ -65,14 +65,14 @@ for(y=[0:1]){
   translate([0, schubladenTiefe + 5 + y*(schubladenHoehe+5)]){
     difference(){
       union(){
-        square([basisplattenBreiteFuerBesteck, schubladenHoehe]);
+        square([schubladenBreite, schubladenHoehe]);
         //Steckecken Boden
         for(i=[(basisplattenBreiteFuerBesteck/5)/2-steckeckenLaenge/2:basisplattenBreiteFuerBesteck/5:basisplattenBreiteFuerBesteck]){
           translate([i, -wandDicke])square([steckeckenLaenge, wandDicke]);
         }
       }
       //Löcher Steckecken Seitenwände
-      for(x=[0:(basisplattenBreiteFuerBesteck-wandDicke)/5:basisplattenBreiteFuerBesteck-wandDicke]){
+      for(x=[wandDicke:(basisplattenBreiteFuerBesteck-wandDicke)/5:basisplattenBreiteFuerBesteck]){
         translate([x, (schubladenHoehe-steckeckenLaenge)/2])square([wandDicke, steckeckenLaenge]);
       }
     }
@@ -81,7 +81,7 @@ for(y=[0:1]){
 
 //Kleine Trennwände
 for(x=[0:4]){
-  translate([basisplattenBreiteFuerBesteck + 5 + x*((schubladenHoehe + 5)), schubladenTiefe+5]){
+  translate([schubladenBreite + 5 + x*((schubladenHoehe + 5)), schubladenTiefe+5]){
     square([trennwandBreite, schubladenHoehe]);
     //Steckecken Seiten
     for(x2=[0:1]){
