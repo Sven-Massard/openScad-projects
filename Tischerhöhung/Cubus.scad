@@ -1,8 +1,28 @@
+height = 40;
+width = 50;
+screwHoleOffset = 15;
+fn = 8;
+senkeSchraubeTiefe = 5;
+durchmesserSchraube = 4;
 difference(){
-  cube([50,50,36], center = true);
+  cube([width,width,height], center = true);
   
-  translate([-15,-15,0])cylinder($fn=32, d=2.75, h= 50, center=true);
-  translate([-15,15,0])cylinder($fn=32, d=2.75, h= 50, center=true);
-  translate([15,-15,0])cylinder($fn=32, d=2.75, h= 50, center=true);
-  translate([15,15,0])cylinder($fn=32, d=2.75, h= 50, center=true);
+  //Schraubenlöcher
+  for(x = [-screwHoleOffset, screwHoleOffset]){
+    for(y = [-screwHoleOffset, screwHoleOffset]){
+      translate([x,y,0])cylinder($fn=fn, d=durchmesserSchraube, h= height, center=true);
+    }
+  }
+  //Senkköpfe oben
+  for(x = [-screwHoleOffset, screwHoleOffset]){
+    for(y = [-screwHoleOffset, screwHoleOffset]){
+      translate([x,y,height/2-senkeSchraubeTiefe/2])cylinder($fn=fn, d1=durchmesserSchraube, d2=senkeSchraubeTiefe+durchmesserSchraube, h=senkeSchraubeTiefe, center=true);
+    }
+  }
+    //Senkköpfe unten
+  for(x = [-screwHoleOffset, screwHoleOffset]){
+    for(y = [-screwHoleOffset, screwHoleOffset]){
+      translate([x,y,-height/2+senkeSchraubeTiefe/2])cylinder($fn=fn, d2=durchmesserSchraube, d1=senkeSchraubeTiefe+durchmesserSchraube, h=senkeSchraubeTiefe, center=true);
+    }
+  }
 }

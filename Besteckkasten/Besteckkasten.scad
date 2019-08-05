@@ -1,5 +1,5 @@
-schubladenTiefe = 461;
-schubladenBreite= 301;
+schubladenTiefe = 455;
+schubladenBreite= 295;
 schubladenHoehe=60;
 wandDicke=3;
 steckeckenLaenge=20;
