@@ -3,7 +3,7 @@ include <Prism.scad>
 // There is no tolerance, so add your own tolerance
 width=36;
 remoteDepth=17; //without buttons
-buttonHeight=2;
+buttonHeight=20;
 
 wallThickness=4;
 windowHeight=60;
@@ -28,11 +28,9 @@ difference(){
   
   
   //Ramps for remote
-  //for(x=[wallThickness, width]){
     translate([wallThickness, windowHeightOffset+wallThickness,  remoteDepth+wallThickness])prism(width,windowHeight+wallThickness,buttonHeight);
-  //}
   
-  //translate([wallThickness+(width-windowWidth)/2, height, remoteDepth+wallThickness])cube([windowWidth, wallThickness, buttonHeight]);
+  translate([wallThickness+(width-windowWidth)/2, height, remoteDepth+wallThickness])cube([windowWidth, wallThickness, buttonHeight]);
   
   //Window
   translate([ (wallThickness*2+width-windowWidth)/2, windowHeightOffset+wallThickness,remoteDepth+wallThickness])cube([windowWidth, windowHeight, windowDepth]);
