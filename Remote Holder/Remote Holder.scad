@@ -3,7 +3,7 @@ include <Prism.scad>
 // There is no tolerance, so add your own tolerance
 width=36;
 remoteDepth=17; //without buttons
-buttonHeight=20;
+buttonHeight=2;
 
 wallThickness=4;
 windowHeight=60;
@@ -19,7 +19,7 @@ screwDiameterHead=8;
 screwDiameterShank=3;
 screwClearance=1;
 
-$fn=16;
+$fn=256;
 difference(){
   CubeModuleWithRoundTopEdges(width+2*wallThickness, height+wallThickness, remoteDepth+buttonHeight+2*wallThickness, edgeRounding);
   
