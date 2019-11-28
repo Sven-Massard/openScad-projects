@@ -1,7 +1,7 @@
 radiusSphere=100;
 thicknessStand=20;
 tolerance=0.2;
-fn=1024;
+fn=32;
 
 difference(){
   sphere($fn=fn, r=radiusSphere);
