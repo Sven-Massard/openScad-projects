@@ -1,7 +1,7 @@
 include <photoresistorCasing.scad>
 include <piezoCasing.scad>
 fanDiameter = 77;
-upperTubeHeight=50;
+upperTubeHeight=20;
 wallThickness=3;
 
 distanceHolesFromCenter=40*sin(30)/sin(60);
