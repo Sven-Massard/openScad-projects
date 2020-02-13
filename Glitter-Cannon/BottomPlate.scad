@@ -20,7 +20,7 @@ difference(){
   
   //Screws for bottom
   translate([(-boxLength+fanDiameter+lowerPlateBarLength)/2+5, (-boxWidth+fanDiameter+lowerPlateBarLength)/2+5]){
-    circle(d=fanDiameter+2*wallThickness);
+    //circle(d=fanDiameter+2*wallThickness);
     for(angle=[0,90,180,270]){
       rotate(a=angle)difference(){
         //Screw Holes for top with magic number
@@ -30,7 +30,7 @@ difference(){
   }
   //Battery Compartment
   translate([boxLength/2-batteryCompartmentLength/2, -boxWidth/2+batteryCompartmentWidth/2]){
-    square([batteryCompartmentLength, batteryCompartmentWidth], center=true);
+    //square([batteryCompartmentLength, batteryCompartmentWidth], center=true);
     translate([-batteryCompartmentScrewDistance/2, 0])circle($fn=fn, d=batteryCompartmentScrewDiameter);
     translate([batteryCompartmentScrewDistance/2, 0])circle($fn=fn, d=batteryCompartmentScrewDiameter);
   }
