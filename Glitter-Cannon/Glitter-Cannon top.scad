@@ -1,6 +1,6 @@
 include <photoresistorCasing.scad>
 include <piezoCasing.scad>
-fanDiameter = 77;
+fanDiameter = 80;
 upperTubeHeight=20;
 wallThickness=3;
 
@@ -10,7 +10,7 @@ fanHolderBarsScrewHoleSize=3;
 fanHolderBarsLength=fanDiameter/2-distanceHolesFromCenter+fanHolderBarsScrewHoleSize/2+wallThickness;
 fanHolderBarsWidth=8;
 
-fn=1024;
+fn=32;
 
 difference(){
   union(){

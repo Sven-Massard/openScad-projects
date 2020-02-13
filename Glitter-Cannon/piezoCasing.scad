@@ -1,6 +1,6 @@
 
 module piezoCasing(fn){
-  piezoDiameter=9.3;
+  piezoDiameter=9.8;
   piezoHeight=5.6;
   contactsDistance=5;
   wallThickness=1;
